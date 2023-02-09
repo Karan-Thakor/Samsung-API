@@ -33,5 +33,21 @@ exports.register = async(req, res) => {
 exports.login = async(req, res) =>{
     
     let user = await User.findOne({email:req.body.email, password:md5(req.body.password)})
-    res.send(user)
+    if(user){
+        // let user = new User(body);
+        user.save(user).then((data) => {
+            res.status(200).send({
+                success:true,
+                data:data,
+                message:"Login successfully"
+            })
+        })
+    }else{
+        return res.status(200).send({
+            success:false,
+            data:null,
+            message:'Invalid login details'
+        })
+    }
+    // res.send(user)
 }
