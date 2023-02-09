@@ -1,4 +1,4 @@
 
 module.exports = {
-    url: "mongodb+srv://infinate:uuTq687sDSwq3EVJ@cluster0.dib4qcx.mongodb.net/Samsung"
+    url: "mongodb+srv://infinate2:WBOnz3pJLAtUT6iH@cluster0.a7xco9a.mongodb.net/Samsung"
   };
